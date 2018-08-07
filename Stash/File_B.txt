@@ -1,0 +1,11 @@
+Content for second file 
+or FILE B
+
+
+ Request<WebServices.Entities.Vehicle> Requests = new 
+Request<WebServices.Entities.Vehicle>();
+                Requests.MessageBody.SystemId = "ILO";
+                Requests.MessageBody.User = "Tinoco";
+                var Response = await 
+RESTClient.Post<Response<VehicleResponse>>(Requests);
+

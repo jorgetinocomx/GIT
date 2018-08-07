@@ -1,0 +1,24 @@
+content of file A
+Some code example:
+
+ /// <summary>
+        /// Add selected vehicle to database and navigate to <see 
+cref="MainPage"/>.
+        /// </summary>
+        private async void ExecuteSelectCommand()
+        {
+            var Match = from x in AvailableVehicles
+                            where x.Identifier == Vehicle
+                            select x ;
+            var Selected = Match.DefaultIfEmpty(new 
+Models.Vehicle()).FirstOrDefault();
+            await App.SettingsInDb.SetVehicle(Selected);
+            await _dialogService.DisplayAlertAsync("Mensaje", "Haz 
+seleccionado el vehículo: " + Selected.NameToShow, "Bien");
+            // Using CarouselView this navigations throw an error. The 
+error source could be related 
+            // to the CarouselView version(beta version) . When stable 
+Carousel View is  available,  
+            // maybe using this line could be possible
+            await _navigationService.GoBackAsync();
+        }
