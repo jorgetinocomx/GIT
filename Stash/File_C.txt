@@ -1,4 +1,0 @@
-Another awesome file . This file  will be commit in
-first______________COMMIT 
-ESTE ES UN CAMBIO QUE HICE EN BRANH teststash para probar modificación
-de branches después de creados desde un stash

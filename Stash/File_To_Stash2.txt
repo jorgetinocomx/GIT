@@ -1,5 +1,0 @@
-This will be stashed by Second Method:
-
-
-git stash --patch
-
